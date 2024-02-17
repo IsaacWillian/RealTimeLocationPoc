@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity(),OnMapReadyCallback {
 
             mMap?.let{
                 val latLng = LatLng(location.latitude,location.longitude)
-                it.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,17f))
+                it.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,13f))
                 val address = Geocoder(this@MainActivity).getFromLocation(location.latitude,location.longitude,1)
                 address?.get(0)?.let{
                     binding.address.text = it.getAddressLine(0)
@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity(),OnMapReadyCallback {
         // Create a LocationManager instance
         val locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 100, 0f, locationListener)
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 100, 0f, locationListener)
 
 
     }
