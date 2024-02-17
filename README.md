@@ -2,7 +2,7 @@
 This is an App to study about Location and Maps
 
 ### Video
-![Video](video/video.webp)
+<img src="video/video.webp" width=200>
 
 ### Features
 This app gets the location of the user in real-time and shows the current address.
